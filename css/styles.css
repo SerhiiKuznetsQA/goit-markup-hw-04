@@ -148,15 +148,28 @@ color: #404BBF;
 }
 
 
+.active-studio:active::after{
+    content: "";
+    display:block;
+    position: absolute;
+    top: 68px;
+    border-radius: 2px;
+    width: 48px;
+    height: 4px;
+    background-color:#404BBF;
+}
 /*-------HERO-SECTION----------*/
 
 .hero-section {
     background-color: #2E2F42;
     max-width: 100%;
-    padding: 188px 0;
-    
-        
-}          
+    padding: 188px 0; 
+    background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url(../images/people-office.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}   
+
 .hero-title {
     font-weight: 700;
     font-size: 56px;
