@@ -35,6 +35,9 @@ margin:0 auto;
 }
 .header {
     border-bottom: 1px solid #E7E9FC;
+    box-shadow: 0px 2px 1px rgba(46, 47, 66, 0.08),
+        0px 1px 1px rgba(46, 47, 66, 0.16),
+        0px 1px 6px rgba(46, 47, 66, 0.08);;
 }
 img {
     display: block;
@@ -87,6 +90,9 @@ display: flex;
     display: flex;
     gap: 40px; 
 }
+.navigation-item{
+    transition: color cubic-bezier(0.4, 0, 0.2, 1);
+}
 
 .navigation-item-link {
     font-weight: 500;
@@ -96,7 +102,6 @@ display: flex;
     color:#2E2F42;
     padding: 24px 0;
     display: block;
-    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .navigation-item-link:hover,
 .navigation-item-link:focus {
@@ -136,11 +141,12 @@ display: flex;
     font-size: 16px;
     line-height: 1.5;
     letter-spacing: 0.02em;
+    transition: color cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .header-contacts-link {
     color: #434455;
-    transition: color cubic-bezier(0.4, 0, 0.2, 1);
+    
 }
 
 
@@ -154,12 +160,13 @@ color: #404BBF;
 
 .hero-section {
     background-color: #2E2F42;
-    max-width: 100%;
+    max-width: 1440px;
     padding: 188px 0; 
     background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url(../images/people-office.jpg);
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size:100% 100%;
     background-position: center;
+    margin: 0 auto;
 }   
 
 .hero-title {
@@ -196,7 +203,7 @@ color: #404BBF;
     border: none;
      box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.15);
     white-space: nowrap;
-    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1)
      
 
 }
@@ -218,23 +225,26 @@ gap: 24px;
 
 .opportunities-item {
 width:calc((100% - 3 * 24px)/4);
- align-items: flex-start;
-    justify-content: flex-start;
-    flex-direction: column;
-    gap: 8px;
+
 }
 
+.icons-section-b{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #8E8F99;
+        border-radius: 4px;
+        width: 264px;
+        height: 112px;
+        margin-bottom: 8px;
+        background-color:#f4f4fd;
+
+}
  .antena-box,
  .clock-box,
  .diagram-box,
  .astronaut-box{
-    border: 1px solid #8E8F99;
-    border-radius: 4px;
-    width:264px;
-    height: 112px;
-    margin-bottom: 8px;
-    padding: 24px 100px;
-    background-color: #F4F4FD;
+   
 }
 
 
@@ -277,54 +287,74 @@ width:calc((100% - 3 * 24px)/4);
     display: flex;
     gap: 24px;
     
-    
-
 }
-/* ЗАКОНЧИЛ ЗДЕСЬ РАСПОСТРОНИТЬ ИЗМЕнЕНИЯ 
-НА ВСЕ ИКОНКИ ДЛЯ ВСЕХ КАРТОЧЕК ЗАСтиЛИЗОВАТЬ ЕЛИПС */
-
 .our-team-item {
-    
     background-color: #FFFFFF;
     width: calc((100% - 3 * 24px)/4);
     height: 100%;
     border-radius: 0 0 4px 4px;
     box-shadow: 0 2px 1px 0 rgba(46, 47, 66, 0.08), 0 1px 1px 0 rgba(46, 47, 66, 0.16), 0 1px 6px 0 rgba(46, 47, 66, 0.08);
     transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+
 }
+.our-team-img {
+    max-width: 100%;
+    height: auto;
+}
+
 .our-team-item:hover {
     box-shadow: 0 2px 1px 0 rgba(46, 47, 66, 0.08),
         0 1px 1px 0 rgba(46, 47, 66, 0.16),
         0 1px 6px 0 rgba(46, 47, 66, 0.08); 
 }
+/* .social{
+        background-color: #FFFFFF;
+            width: 100%;
+            height: 100%;
+            border-radius: 0 0 4px 4px;
+            box-shadow: 0 2px 1px 0 rgba(46, 47, 66, 0.08), 0 1px 1px 0 rgba(46, 47, 66, 0.16), 0 1px 6px 0 rgba(46, 47, 66, 0.08);
+            transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.our-team-item:hover {
+    box-shadow: 0 2px 1px 0 rgba(46, 47, 66, 0.08),
+        0 1px 1px 0 rgba(46, 47, 66, 0.16),
+        0 1px 6px 0 rgba(46, 47, 66, 0.08);
+} */
 .wraper {
-    padding: 32px 16px;
+        padding-top: 32px;
+        padding-bottom: 32px;
+    
 }
-.social{
+.description-list{
     display: flex;
-        align-items: center;
-        justify-content: center;
-        flex-direction: row;
-        gap: 24px;
-        
-
+    justify-content: center;
+    gap: 24px;
 }
-.team-social-icon{
-border-radius: 50%;
-    width: calc((100% - 3 * 24px)/4);
+.description-item{
+    width: 40px;
     height: 40px;
+}
+
+.team-social-icon{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    width: 100%;
+    height:100%;
     fill: #F4F4FD;
     padding: 12px;
     background-color: #4D5AE5;
     transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
         
 }
-
-.our-team-img {
-    
-    
-
+.team-social-icon:hover,
+.team-social-icon:focus{
+    background-color: #404bbf;
 }
+
+
 
 .our-team-subtitle {
         font-weight: 500;
@@ -371,9 +401,10 @@ border-radius: 50%;
 
 .portfolio-item {
         width: calc((100% - 24px * 2) / 3);
+        transition-property: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 } 
 
-.portfolio-item:hover .text-over-wrap{
+.portfolio-item:hover .text-overlay{
     transform: translateY(0);
 }
 .over-wrap {
@@ -382,7 +413,7 @@ border-radius: 50%;
 
 }
 
-.text-over-wrap {
+.text-overlay{
     position: absolute;
     top: 0;
     font-weight: 400;
@@ -399,7 +430,7 @@ border-radius: 50%;
     align-items: center;
     background-image: url(../images/overlay-image.jpg);
     transform: translateY(100%);
-    transition:250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
     
     
@@ -433,17 +464,24 @@ border-radius: 50%;
         color: #434455;
 }
 /*-------Footer----------*/
+.footer-first {
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+} 
+
+.footer-second{
+    margin-right: 120px;
+}
+
 .footer {
     background-color: #2E2F42;
     width: 100%;
     padding-top: 100px;
     padding-bottom: 100px;
 }
-.wrap-footer{
-    /* display: flex; */
-}
 
-.footer-logo{
+.footer-logo {
     font-family: 'Raleway', sans-serif;
     font-weight: 700;
     font-size: 18px;
@@ -455,64 +493,69 @@ border-radius: 50%;
     display: inline-block;
 }
 
-
-.footer-logo-part{
+.footer-logo-part {
     font-family: 'Raleway', sans-serif;
-        font-weight: 700;
-        font-size: 18px;
-        line-height: 1.17;
-        letter-spacing: 0.03em;
-        text-transform: uppercase;
-        color: #f4f4fd;
-        
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 1.17;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    color: #F4F4FD;
 }
-
 
 .footer-text {
-        font-weight: 400;
-        font-size: 16px;
-        line-height: 1.5;
-        letter-spacing: 0.02em;
-        color: #F4F4FD;
-        text-align: start;
-        max-width: 264px;
-        
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+    color: #FFFFFF;
+    text-align: start;
+    max-width: 264px;
+    
 }
-.social-sub-title{
 
-        font-weight: 500;
-        font-size: 16px;
-        line-height: 1.5;
-        letter-spacing: 0.02em;
-        color: #FFFFFF;
-        text-align: start;
-}
-.social-item-footer{
-display: flex;
+/* .social-items-footer {
+    width: 208px;
+    height: 80px;
+} */
+
+.social-items-list {
+    display: flex;
     align-items: center;
-    /* flex-wrap: nowrap; */
     justify-content: center;
     flex-direction: row;
     gap: 16px;
-
-
 }
-/* .footer-social{
-        border-radius: 50%;
-        fill: #F4F4FD;
-        padding: 12px;
-        background-color: #4D5AE5;
-        transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-} */
 
-.ft2{
-    width: 208px;
-        height: 80px;
-        display: flex;
-        flex-direction: row;
+.social-text {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+    color: #FFFFFF;
+    margin-bottom: 16px;
 }
+
+.social-items-footer {}
+
+.social-item-icon a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    fill: #F4F4FD;
+    padding: 12px;
+    background-color: #4D5AE5;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.social-item-icon a:hover,
+.social-item-icon a:focus{
+background-color: #31d0aa;
+}
+
 .footer-social {
-    width: 208px;
-    height: 40px;}
-/* Сделать до ума футер и проверить по критериям приемки
-правильно установить дисплей флекс */
+   
+}
